@@ -1,0 +1,22 @@
+require_relative "lib/kakugosearch/version"
+
+Gem::Specification.new do |spec|
+  spec.name        = "kakugosearch-rails"
+  spec.version     = KakugoSearch::VERSION
+  spec.authors     = ["KakugoSearch Contributors"]
+  spec.summary     = "Rails integration for the KakugoSearch AI-enhanced search engine"
+  spec.description = "Drop-in ActiveRecord concern that keeps KakugoSearch indexes in sync " \
+                     "with your models via save/destroy callbacks, plus a search class method."
+  spec.license     = "MIT"
+
+  spec.required_ruby_version = ">= 3.0"
+
+  spec.files = Dir["lib/**/*.rb", "README.md", "LICENSE"]
+
+  spec.add_dependency "railties", ">= 6.0"
+
+  spec.add_development_dependency "rspec",        "~> 3.0"
+  spec.add_development_dependency "webmock",      "~> 3.0"
+  spec.add_development_dependency "activerecord", ">= 6.0"
+  spec.add_development_dependency "sqlite3"
+end
